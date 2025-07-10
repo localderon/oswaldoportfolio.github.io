@@ -1,3 +1,22 @@
+:root {
+  --accent: #00B5AD;
+  --accent-2: #FF9F43;
+  --bg-soft: #F5F8FA;
+  --text-main: #394452;
+  --text-head: #222F3E;
+  --font-main: 'Poppins', sans-serif;
+}
+
+body, input, textarea, select {
+  font-family: var(--font-main);
+  color: var(--text-main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-head);
+  font-weight: 600;
+}
+
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 
@@ -2066,30 +2085,11 @@ input, select, textarea {
 	input[type="button"],
 	button,
 	.button {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		border: 0;
-		border-radius: 0;
-		cursor: pointer;
-		display: inline-block;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 0.8rem;
-		font-weight: 900;
-		letter-spacing: 0.075em;
-		height: 3rem;
-		line-height: 3rem;
-		padding: 0 2rem;
-		text-align: center;
-		text-decoration: none;
-		text-transform: uppercase;
-		white-space: nowrap;
-	}
+  background: var(--accent);
+  color: white !important;
+  border: none;
+  transition: background 0.2s ease;
+}
 
 		input[type="submit"].icon:before,
 		input[type="reset"].icon:before,
@@ -2215,9 +2215,9 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 2px #18bfef;
-			color: #18bfef !important;
-		}
+  background: var(--accent-2);
+  color: white !important;
+}
 
 		input[type="submit"].primary,
 		input[type="reset"].primary,
@@ -3363,8 +3363,8 @@ input, select, textarea {
 			#intro input[type="button"]:hover,
 			#intro button:hover,
 			#intro .button:hover {
-				box-shadow: inset 0 0 0 2px #18bfef;
-				color: #18bfef !important;
+ 					 background: var(--accent-2);
+  					color: white !important;
 			}
 
 			#intro input[type="submit"].primary,
@@ -4017,9 +4017,9 @@ input, select, textarea {
 			#footer input[type="button"]:hover,
 			#footer button:hover,
 			#footer .button:hover {
-				box-shadow: inset 0 0 0 2px #18bfef;
-				color: #18bfef !important;
-			}
+ 					 background: var(--accent-2);
+ 					 color: white !important;
+	}		
 
 			#footer input[type="submit"].primary,
 			#footer input[type="reset"].primary,
@@ -4687,3 +4687,35 @@ input, select, textarea {
 		}
 
 	}
+	
+.button {
+  background: var(--accent);
+  color: white !important;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: var(--accent-2);
+  color: white !important;
+}
+
+
+	#intro,
+#footer { background: var(--bg-soft); }
+
+.posts article {
+  box-shadow: 0 6px 12px rgba(0,0,0,.06);
+  transition: transform .2s;
+}
+.posts article:hover { transform: translateY(-4px); }
+
+#header .logo:hover { color: var(--accent-2); }
+
+hr.accent {
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  border: none;
+  margin: .8em auto 1.2em;
+}
